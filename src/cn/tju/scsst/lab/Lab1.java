@@ -4,85 +4,6 @@ import java.util.ArrayList;
 
 public class Lab1 {
 
-//	private int numOf50 = 1;
-//	private int numOf20 = 1;
-//	private int numOf5  = 2;
-//	private int numOf1  = 3;
-//
-//	public void triangleProblem(int x) {
-//		if (x <= 0) {
-//			System.out.println("Finished");
-//		}
-//		if (numOf50 == 0 && numOf20 == 0 && numOf5 == 0 && numOf1 == 0 && x > 0) {
-//			System.out.println("Can not take out");
-//		}
-//
-//		if (x == 50 && numOf50 > 0) {
-//			System.out.println("50");
-//			numOf50--;
-//		} else if (x == 20 && numOf20 > 0) {
-//			System.out.println("20");
-//			numOf20--;
-//		} else if (x == 5 && numOf5 > 0) {
-//			System.out.println("5");
-//			numOf5--;
-//		} else if (x == 1 && numOf1 > 0) {
-//			System.out.println("1");
-//			numOf1--;
-//		} else if (x > 50 && numOf50 > 0) {
-//			numOf50--;
-//			triangleProblem(x - 50);
-//			System.out.println("50");
-//		} else if (x > 20 && numOf20 > 0) {
-//			numOf20--;
-//			triangleProblem(x - 20);
-//			System.out.println("20");
-//		} else if (x > 5 && numOf5 > 0) {
-//			numOf5--;
-//			triangleProblem(x - 5);
-//			System.out.println("5");
-//		} else if (x > 1 && numOf1 > 0) {
-//			numOf1--;
-//			triangleProblem(x - 1);
-//			System.out.println("1");
-//		} else {
-//			System.out.println("Can not take out");
-//			System.exit(1);
-//		}
-//	}
-//
-//	public boolean triangleProblem2(int x){
-//		for (int num50 = 0; num50 <= numOf50; num50++) {
-//		if (50 * num50 > x){
-//			break;
-//		}
-//		for (int num20 = 0; num20 <= numOf20; num20++) {
-//			if (20 * num20 + 50 * num50 > x){
-//				break;
-//			}
-//			for (int num5 = 0; num5 <= numOf5; num5++) {
-//				if (5 * num5 + 20 * num20 + 50 * num50 > x){
-//					break;
-//				}
-//				for (int num1 = 0; num1 <= numOf1; num1++) {
-//					if (num1 + 5 * num5 + 20 * num20 + 50 * num50 > x){
-//						break;
-//					}
-//					if (num1 + 5 * num5 + 20 * num20 + 50 * num50 == x){
-//						System.out.println("50 " + num50);
-//						System.out.println("20 " + num20);
-//						System.out.println("5  " + num5);
-//						System.out.println("1  " + num1);
-//						return true;
-//					}
-//				}
-//			}
-//		}
-//	}
-//	System.out.println("Can not take out " + x + " yuan!");
-//	return false;
-//	}
-
     private class Cash implements Comparable<Cash>{
         public int num;
         public int value;
@@ -117,15 +38,11 @@ public class Lab1 {
                     x -= cash.value;
                 } else if (cash.value == x) {
                     x -= cash.value;
-                } else if (cash.value > x) {
+                } else {
                     break;
                 }
             }
         }
-        if (x != 0) {
-            return false;
-        } else {
-            return true;
-        }
+        return x == 0;
     }
 }
