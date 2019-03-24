@@ -25,7 +25,7 @@ public class Lab1 {
     // 用ArrayList而非HashMap是因为算法triangleProblem2需要对面值进行排序
     private ArrayList<Cash> cashes = null;
 
-    public boolean triangleProblem3(int x) {
+    public boolean triangleProblem(int x) {
         this.cashes = new ArrayList<>();
         this.cashes.add(new Cash(50, 1));
         this.cashes.add(new Cash(20, 1));

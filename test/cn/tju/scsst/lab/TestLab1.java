@@ -54,9 +54,6 @@ public class TestLab1 {
 
     @Test
     public void testLab1(){
-//		lab.triangleProblem(this.input);
-//		assertEquals(this.expected, lab.triangleProblem2(input));
-        assertEquals(this.expected, lab.triangleProblem3(input));
-//		System.out.println();
+        assertEquals(this.expected, lab.triangleProblem(input));
     }
 }
