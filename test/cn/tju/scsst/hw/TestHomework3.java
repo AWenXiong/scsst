@@ -6,6 +6,6 @@ public class TestHomework3 {
 
     @Test
     public void test() {
-        Homework3.printPrimes(20);
+        Homework3.printPrimes(10);
     }
 }

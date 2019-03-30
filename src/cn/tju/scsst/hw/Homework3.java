@@ -2,14 +2,16 @@ package cn.tju.scsst.hw;
 
 public class Homework3 {
 
-    public static boolean isDivisible (int i, int j) {
+    public static boolean isDivisible (int i, int j)
+    {
         if (j%i == 0)
             return true;
         else
             return false;
     }
 
-    public static void printPrimes (int n) {
+    public static void printPrimes (int n)
+    {
         int curNum;           // Value currently considered for primeness
         int numPrimes;          // Number of primes found so far.
         boolean isPrime;        // Is curPrime prime?
@@ -23,13 +25,16 @@ public class Homework3 {
         {
             curNum++;  // next number to consider ...
             isPrime = true;
-            for (int i = 0; i <= numPrimes-1; i++) {   // for each previous prime.
-                if (isDivisible (primes[i], curNum)) {  // Found a divisor, curPrime is not prime.
+            for (int i = 0; i <= numPrimes-1; i++)
+            {   // for each previous prime.
+                if (isDivisible (primes[i], curNum))
+                {  // Found a divisor, curPrime is not prime.
                     isPrime = false;
                     break; // out of loop through primes.
                 }
             }
-            if (isPrime) {   // save it!
+            if (isPrime)
+            {   // save it!
                 primes[numPrimes] = curNum;
                 numPrimes++;
             }
@@ -41,18 +46,22 @@ public class Homework3 {
         }
     }  // end printPrimes
 
-    public static void main (String[] argv) {  // Driver method for printPrimes
+    public static void main (String[] argv)
+    {  // Driver method for printPrimes
         // Read an integer from standard input, call printPrimes()
         int integer = 0;
-        if (argv.length != 1) {
+        if (argv.length != 1)
+        {
             System.out.println ("Usage: java PrintPrimes v1 ");
             return;
         }
 
-        try {
+        try
+        {
             integer = Integer.parseInt(argv[0]);
         }
-        catch (NumberFormatException e) {
+        catch (NumberFormatException e)
+        {
             System.out.println ("Entry must be a integer, using 1.");
             integer = 1;
         }
